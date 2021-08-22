@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Book Store</title>
+  </head>
+  <body>
+
+  <div class="col-lg-8 border border-success rounded p-4 m-4 mx-auto">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container ">
+    <a class="navtitle mx-auto" href="#">Navbar</a>
+  </div>
+</nav>
+    <nav class="mt-4 mb-2">  
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Add Books</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" onclick="showAllBooks();">Show Books</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                
+                  <!-- add book form -->
+                  <div class="col-lg-5 mx-auto border border-info rounded p-3 m-3">
+                    <h2 class="alert alert-info mt-4 text-center" role="alert"> Add a Book</h2>
+                    <div class="form-group ">
+                         <label> Book Name</label>
+                         <input type="text" name="name" id="book_name" class="form-control">
+                     </div>
+                     <div class="form-group">
+                        <label class="mt-2"> Book Price</label>
+                        <input type="number" name="price" id="book_price" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="mt-2"> Number of Pages</label>
+                        <input type="number" name="pages" id="book_pages" class="form-control">
+                    </div>
+                    <div class="form-group mt-4">
+                       <button class="btn form-control btn-success" id="save_book">Save Book</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="tab-pane fade mt-4" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <h2 class="alert alert-success mt-4 text-center" role="alert">Show Books</h2>
+            </div>
+            
+          </div>
+
+    </nav>
+ 
+  </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+    <script type="text/javascript" src="{% static 'srcipt.js'%}"></script>
+  </body>
+</html>
